@@ -1,0 +1,19 @@
+def hanoi(n, a, b, c):
+    """
+    汉诺塔问题 将n个盘子从 a->c 所需步骤
+    :param n: 盘子数量
+    :param a: A柱名称
+    :param b: B柱名称
+    :param c: C柱名称
+    :return: 每一次移动的步骤
+    """
+    
+    # 递归结束条件
+    if n == 0:
+        return
+    else:
+        hanoi(n-1, a, c, b)
+        print("Moving from %s to %s" % (a, c))
+        hanoi(n-1, b, a, c)
+        
+ hanoi(3, "A", "B", "C")
